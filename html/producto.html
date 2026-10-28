@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del producto</title>
+    <script src="../js/script.js"></script>
+    <script src="../js/apiproductos.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <div class="encabezado encabezadoSimple">
+        <p class="etiquetaEncabezado">SHOP API</p>
+        <h1 class="tituloEncabezado">Detalle del producto</h1>
+    </div>
+
+    <div class="contenedorDetalle">
+
+        <a class="enlaceVolver" href="../index.html">← Volver al catálogo</a>
+
+        <div class="tarjetaDetalle" id="tarjetaDetalle">
+
+        </div>
+
+    </div>
+
+    <script>
+        parametros = new URLSearchParams(window.location.search)
+        id = parametros.get('id')
+        extraerDatosProducto(id)
+    </script>
+</body>
+</html>
